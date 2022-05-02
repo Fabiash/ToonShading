@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MudkipToonBody
-  m_Shader: {fileID: -6465566751694194690, guid: 2455be314e47cdf4199b9accbaede59a,
+  m_Shader: {fileID: -6465566751694194690, guid: 6d9eda1bf6555c64b92591fd927cb15d,
     type: 3}
   m_ShaderKeywords: FRESNEL_ON
   m_LightmapFlags: 4
@@ -104,7 +104,11 @@ Material:
     m_Floats:
     - FRESNEL: 1
     - Vector1_0d41a6a2ef5b416ba3ddabb2771c86f0: 1.5
+    - Vector1_1: -100
+    - Vector1_2: 100
+    - Vector1_5f1fba3c48964527804ca775cd5b253f: 100
     - _AlphaClip: 0
+    - _Attenuation: 0.85
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -118,6 +122,9 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _LightX: 1
+    - _LightY: -1
+    - _LightZ: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -135,6 +142,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
