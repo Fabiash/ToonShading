@@ -319,6 +319,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mudkip
       objectReference: {fileID: 0}
+    - target: {fileID: 6911845247897622465, guid: 7f70cdf341136d84aa8866042788a47a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911845247897622465, guid: 7f70cdf341136d84aa8866042788a47a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911845247897622465, guid: 7f70cdf341136d84aa8866042788a47a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f70cdf341136d84aa8866042788a47a, type: 3}
 --- !u!1 &1012548565 stripped
