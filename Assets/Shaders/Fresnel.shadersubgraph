@@ -1288,7 +1288,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "d711ae6cd9f6453b9d9f86cac01f09a5",
     "m_Id": 0,
-    "m_DisplayName": "Vector4",
+    "m_DisplayName": "Diffuse",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

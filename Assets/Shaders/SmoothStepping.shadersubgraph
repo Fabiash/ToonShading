@@ -630,7 +630,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "6222fcf42e22463e9dcb42d31a965f82",
     "m_Id": 0,
-    "m_DisplayName": "Vector4",
+    "m_DisplayName": "Input",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
