@@ -31,7 +31,13 @@ void SceneLighting_float(float3 WorldPos, float3 NormalVector, out half3 MainDir
     v.normal = NormalVector;
     
     //Main light
-    float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    #if SHADOWS_SCREEN
+        float4 clipPos = TransformWorldToHClip(WorldPos);
+        shadowCoord = ComputeScreenPos(clipPos);
+    #else
+        float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    #endif
+    
     Light mainLight = GetMainLight(shadowCoord);
     
     MainLight = CalculateLights(mainLight, v);

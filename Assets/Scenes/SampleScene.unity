@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502682, g: 0.37139246, b: 0.49601132, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502694, g: 0.37139398, b: 0.496013, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 84137189}
   - component: {fileID: 84137188}
   m_Layer: 0
-  m_Name: Spot Light (2)
+  m_Name: Spot Light Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,11 +210,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84137187}
   m_LocalRotation: {x: 0, y: 0.5, z: -0.7071068, w: 0.5}
-  m_LocalPosition: {x: -1, y: 2, z: -1.5}
+  m_LocalPosition: {x: -1.5, y: 2, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: -90}
 --- !u!850595691 &238712526
 LightingSettings:
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 847817212}
   - component: {fileID: 847817211}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: Spot Light Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,11 +412,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847817210}
   m_LocalRotation: {x: 0.5, y: 0, z: -0.5, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 2, z: -1.5}
+  m_LocalPosition: {x: 1.5, y: 2, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: -45, z: -90}
 --- !u!1001 &1012548564
 PrefabInstance:
@@ -1340,10 +1340,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138677391}
-  m_LocalRotation: {x: 0.60876703, y: 0.6848279, z: -0.35972628, w: 0.17609797}
-  m_LocalPosition: {x: 0.24, y: 3, z: 4.18}
+  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: 0.2705981, w: 0.6532815}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 45.000004, y: 196.159, z: 90.00001}
+  m_LocalEulerAnglesHint: {x: 45.000004, y: 90, z: 90.00001}

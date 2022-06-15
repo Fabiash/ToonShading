@@ -842,7 +842,7 @@
     "m_Guid": {
         "m_GuidSerialized": "5228ad87-535c-49fa-a3df-9da0586fa8b3"
     },
-    "m_Name": "Fresnel Color",
+    "m_Name": "Rim Light Color",
     "m_DefaultReferenceName": "Color_6b6f706621354a09b698003f8f5c9978",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
