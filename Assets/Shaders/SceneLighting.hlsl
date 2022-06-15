@@ -11,13 +11,14 @@ struct Variables
 {
     float3 normal;
 };
-float3 CalculateLights(Light l, Variables v)
+float3 CalculateDiffuseLight(Light l, Variables v)
 {
     return (saturate(dot(v.normal, l.direction)) * l.color) * (l.distanceAttenuation * l.shadowAttenuation);
 }
+
 #endif
 
-void SceneLighting_float(float3 WorldPos, float3 NormalVector, out half3 MainDirection, out half3 MainColor, out float MainDistanceAtten, out half MainShadowAtten, out float3 MainLight, out float3 AdditionalLights)
+void SceneLighting_float(float3 WorldPos, float3 NormalVector, out half3 MainDirection, out half3 MainColor, out float MainDistanceAtten, out half MainShadowAtten, out float3 MainLight, out float3 AdditionalLights, out half AdditionalShadowAtten)
 {
 #ifdef SHADERGRAPH_PREVIEW
     MainDirection = half3(0.5,0.5,0.5);
@@ -26,15 +27,22 @@ void SceneLighting_float(float3 WorldPos, float3 NormalVector, out half3 MainDir
     MainShadowAtten = 1;
     AdditionalLights = (1,1,1);
     MainLight = (1,1,1);
+    AdditionalShadowAtten = 1;
 #else
     Variables v;
     v.normal = NormalVector;
     
     //Main light
-    float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    #if SHADOWS_SCREEN
+        float4 clipPos = TransformWorldToHClip(WorldPos);
+        float4 shadowCoord = ComputeScreenPos(clipPos)
+    #else
+        float4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
+    #endif
+    
     Light mainLight = GetMainLight(shadowCoord);
     
-    MainLight = CalculateLights(mainLight, v);
+    MainLight = CalculateDiffuseLight(mainLight, v);
     MainDirection = mainLight.direction;
     MainColor = mainLight.color;
     MainDistanceAtten = mainLight.distanceAttenuation;
@@ -45,9 +53,10 @@ void SceneLighting_float(float3 WorldPos, float3 NormalVector, out half3 MainDir
     for (int i = 0; i < pixelLightCount; i++)
     {
         Light currentAdditionalLight = GetAdditionalLight(i, WorldPos, 1);
-        AdditionalLights += CalculateLights(currentAdditionalLight, v);
+        AdditionalLights += CalculateDiffuseLight(currentAdditionalLight, v);
+        AdditionalShadowAtten += currentAdditionalLight.shadowAttenuation; 
     }
-        
+    
 #endif
 
 }
